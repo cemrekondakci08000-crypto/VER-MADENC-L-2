@@ -6,7 +6,8 @@ ayrıldığını incelemek ve gelecekte ayrılabilecek müşterileri tahmin eden
 modeller arasinda karşılaştırma yapma gibi işlemler yapılmıştır. 
 2. Veri Seti Tanıtımı 
 Projede kullanılan veri seti “Telco Customer Churn” veri setidir. 
-Veri setinde müşterilere ait: 
+Veri setinde müşterilere ait:
+
 • cinsiyet,  
 • internet hizmeti,  
 • sözleşme tipi,  
@@ -16,6 +17,7 @@ Veri setinde müşterilere ait:
 gibi bilgiler bulunmaktadır.  
 Hedef değişken “Churn” sütunudur. 
 • Churn = Yes → müşteri ayrılmış  
+
 • Churn = No → müşteri şirkette kalmıştır 
 Veri setinin Orange Data Table üzerindeki görünümü
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/bced099e-b4c5-49cb-972b-1d5a2fd49ef2" />
@@ -83,22 +85,30 @@ Yapılan analizlerde:
 • yüksek aylık ücretlerin,  
 • düşük müşteri sadakatinin 
 müşteri kaybını artırdığı görülmüştür. 
-10.SORULAR  
+10.SORULAR
+   
 Soru 1: 
 TotalCharges sütunundaki sayısal değerlerin neden text olarak algılandığını açıklayınız. 
+
 Cevap: 
 TotalCharges sütununda boş değerler bulunduğu için Orange bu sütunu text olarak algılamıştır. Eksik 
 değerler temizlendikten sonra sütun sayısal olarak kullanılabilmiştir. 
+
 Soru 2: 
 customerID sütunu neden kaldırılmıştır? 
+
 Cevap: 
 customerID sütunu her müşteri için benzersiz olduğu için tahminleme açısından anlamlı bilgi 
 sağlamamaktadır. Bu nedenle modelden çıkarılmıştır. 
+
 Soru 3: 
 Şirket için en riskli müşteri profili nedir? 
+
 Cevap: 
 Kısa süreli üyeliğe sahip, yüksek aylık ödeme yapan, month-to-month sözleşmeli 
+
 Soru 4: 
 En başarılı model hangisidir? 
+
 Cevap: 
 AUC ve Classification Accuracy değerlerine göre en başarılı model logistic regression olmuştur  
